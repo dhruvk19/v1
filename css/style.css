@@ -1,0 +1,175 @@
+/* mobile view */
+/* * {
+    box-sizing: border-box;
+} */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    line-height: 1.6;
+    background-color: #0f172a;
+    
+}
+.main, footer{
+    padding: 0 50px;
+    padding-top: 20px;
+}
+footer{
+    margin-bottom: 20px;
+}
+.about, h1{
+    padding: 20px 0;
+}
+.intro{
+    font-family: 'Courier New', monospace;
+    color: #64FFDA;
+
+
+}
+h1{
+    color: white;
+    /* font-size: clamp(40px, 8vw, 80px); */
+    font-size: xx-large;
+    font-family: 'Archivo Black';
+    line-height: 1;
+
+}
+h2{
+    font-size: x-large;
+    color: #8892B0;
+    font-family: 'Archivo Black';
+
+    
+
+}
+/* font-family: 'Courier New', monospace; */
+h3{
+    font-size: large;
+    color: #8892B0;
+}
+.body_container h2{
+    margin-bottom: 5px;
+}
+
+
+
+.nav{
+    color: white;
+    background-color: #66b2b2;
+}
+
+/* .container{
+    overflow: auto;
+    max-width: 1100px;
+    padding: 0 40px;
+    margin: 0 auto;
+} */
+
+.nav .flex{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    margin-left: auto;
+    
+}
+.logo{
+    width: 20%;
+    min-width: 45px;
+    margin-right: auto;
+
+}
+.nav ul{
+    display: flex;
+}
+a{
+    color: #64FFDA;
+    text-decoration: none;
+}
+/* TODO add hover, focus mode for umichprojects button */
+.umichprojects{
+    display: inline-block;
+    margin: 10px 0px;
+    padding: 10px;
+    border: solid #64FFDA 1px;
+    
+}
+.umichprojects:hover, .umichprojects:focus, .quick-links img:hover, .quick-links img:focus{
+    transform: scale(0.98);
+}
+.nav a {
+    color: white;
+    margin: 0 5px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.nav a:hover, .nav a:focus{
+    border-bottom: solid 4px #020202;
+}
+
+.curr{
+    border-bottom: solid 4px #020202;
+}
+.quick-links{
+    display: flex;
+    justify-content: space-around;
+}
+.quick-links img, .projects img, .icon{
+    width: 10%;
+    max-width: 50px;
+}
+.tech-skills{
+    font-family: 'Courier New', monospace;
+    color: #64FFDA;
+
+}
+.projects, .experiences{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+}
+.projects div, .experiences div{
+    background-color: #112340;
+    padding: 20px;
+    border-radius: 2%;
+
+}
+ul li::before{
+    content: "\2022";
+    color: #64FFDA;
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+/* .coursework ul li::before, .projects ul li::before, .experiences ul li::before{ */
+    /* content: "\2022"; */
+    /* color: #64FFDA; */
+    /* display: inline-block; Needed to add space between the bullet and the text */
+    /* width: 1em; Also needed for space (tweak if needed) */
+    /* margin-left: -1em; Also needed for space (tweak if needed) */
+/* } */
+.nav ul li::before {
+    display: none;
+}
+@media screen and (min-width: 800px) {
+    /* this is tablet */
+    .projects{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 20px;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    /* this is desktop */
+    .about{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        row-gap: 35px;
+    }
+    .projects{
+        row-gap: 35px;
+        column-gap: 35px;
+    }
+}
+  
+/* add media for preferred reduced motion */
