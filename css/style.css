@@ -72,11 +72,15 @@ h3{
     margin-left: auto;
     
 }
+.logo-container{
+    display: none;
+    margin-right: auto;
+}
 .logo{
+    display: none;
     width: 20%;
     min-width: 45px;
     margin-right: auto;
-
 }
 .nav ul{
     display: flex;
@@ -95,6 +99,11 @@ a{
 }
 .umichprojects:hover, .umichprojects:focus, .quick-links img:hover, .quick-links img:focus{
     transform: scale(0.98);
+    transition: transform 0.3s ease;
+}
+.projects div:hover, .projects div:focus, .experiences div:hover, .experiences div:focus{
+    transform: scale(0.98);
+    transition: transform 0.3s ease;
 }
 .nav a {
     color: white;
@@ -151,13 +160,51 @@ ul li::before{
 .nav ul li::before {
     display: none;
 }
+.skip{
+    display: none;
+}
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 200;
+}
+.logo{
+    display: none;
+}
 @media screen and (min-width: 800px) {
     /* this is tablet */
     .projects{
         grid-template-columns: 1fr 1fr;
         column-gap: 20px;
     }
+    .skip{
+        display: block;
+      }
+    .skip a:focus{
+        z-index: 300;
+        top: 20px;
+    }
+    .skip a{
+        background: black;
+        left: 0;
+        padding: 6px;
+        color: white;
+        -webkit-transition: top 1s ease-out;
+        transition: top 1s ease-out;
+        position: absolute;
+        top: -40px;
+        z-index: 300;
+    }
+    .logo{
+        max-width: 30px;
+        display: inline;
+    }
+    .logo-container{
+        display: inline;
+    }
+    
 }
+
 
 @media screen and (min-width: 900px) {
     /* this is desktop */
@@ -173,3 +220,9 @@ ul li::before{
 }
   
 /* add media for preferred reduced motion */
+@media screen and (prefers-reduced-motion: reduce){
+    .skip a{
+        -webkit-transition: none; 
+        transition: none;        
+    }
+}
