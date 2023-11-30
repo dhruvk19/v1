@@ -7,13 +7,16 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="images/x-icon" href="images/page-favicon.jpeg" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
+    <script src="https://kit.fontawesome.com/cfc9c727ff.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
     <title>Dhruv's Portfolio</title>
 </head>
 <body>
+    <div class="skip" ><a href="#main" tabindex="1" >Skip to Main Content</a></div>
     <!-- nav bar -->
     <div class = "nav">
         <div class = "flex">
+            <img src="images/page-favicon.jpeg" alt="" class="logo" onclick=redirectHome()>
             <nav>
                 <ul>
                     <li><a href="index.html" class = "curr">Home</a></li>
@@ -28,7 +31,7 @@
     <div class="main">
         <div class = "body_container">
             <p class="intro">Hi, my name is</p>
-            <h1 class = "logo">Dhruv Kapur.</h1>
+            <h1 class = "name">Dhruv Kapur.</h1>
             
             <div class = "about">
                 <div>
@@ -69,7 +72,9 @@
         <h2>Quick Links:</h2>
         <div class = "quick-links">
             <img src="images/linkedin-icon.png" alt="LinkedIn Icon" onclick=redirectToLinkedIn()>
+            <!-- <i class="fa-brands fa-linkedin fa-2xl" style="color: #66b2b2;"></i> -->
             <img src="images/github-icon2.png" alt="GitHub Icon" onclick=redirectToGitHub()>
+            <!-- <i class="fa-brands fa-github fa-2xl" style="color: #66b2b2;"></i> -->
             <img src="images/or-icon.png" alt="Open Review Icon" onclick=redirectToOR()>
         </div>
         <script src="js/redirect_icon.js"></script>
