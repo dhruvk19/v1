@@ -1,5 +1,5 @@
 function redirectToSIProject() {
-    window.location.href = 'https://github.com/dhruvk19';
+    window.location.href = 'https://github.com/dhruvk19/final_project';
 }
 // function redirectToGitHub() {
 //     window.location.href = 'https://github.com/dhruvk19';
