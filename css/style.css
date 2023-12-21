@@ -2,16 +2,63 @@
 /* * {
     box-sizing: border-box;
 } */
+
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
     line-height: 1.6;
     background-color: #0f172a;
-    
+    overflow: auto;
 }
+
+.animation-container {
+    overflow: hidden; 
+}
+
+
+@keyframes fade-down{
+    0% {
+        opacity: 0;
+        transform: translateY(-30px) scale(1);
+        
+    }
+    
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+        
+    }
+}
+@keyframes slideInFromLeft {
+    to {
+        opacity: 1;
+        transform: translateX(0%); 
+    }
+}
+.slide-in-from-left {
+    animation: slideInFromLeft 1s ease-out forwards;
+}
+
+
+.animate-fl {
+    /* opacity: 0; 
+    transform: translate(-20%); */
+    animation: fade-down 1s;
+}
+
+.temp {
+    padding-top: 35px;
+}
+
+
+
 .main, footer{
     padding: 0 50px;
     padding-top: 20px;
+}
+.footer-email{
+    padding-bottom: 30px;
 }
 footer{
     margin-bottom: 20px;
@@ -19,16 +66,32 @@ footer{
 .about, h1{
     padding: 20px 0;
 }
-.intro{
+#section1 {
+    animation: fade-down 1s 0.1s backwards;
+}
+#section2 {
+    animation: fade-down 1s 0.2s backwards;
+}
+#section3 {
+    animation: fade-down 1s 0.3s backwards;
+}
+#section4 {
+    animation: fade-down 1s 0.4s backwards;
+}
+.intro {
     font-family: 'Courier New', monospace;
     color: #64FFDA;
 
+    /* opacity: 0; 
+    transform: translate(-20%);
+    animation: slideInFromLeft 1s ease-out forwards; */
+    animation: fade-down 1s;
 
 }
 h1{
     color: white;
     /* font-size: clamp(40px, 8vw, 80px); */
-    font-size: xx-large;
+    font-size: xxx-large;
     font-family: 'Archivo Black';
     line-height: 1;
 
@@ -49,11 +112,13 @@ h3{
 .body_container h2{
     margin-bottom: 5px;
 }
-
+p, li {
+    font-size: large;
+}
 
 
 .nav{
-    color: white;
+    color: black;
     background-color: #66b2b2;
 }
 
@@ -97,7 +162,11 @@ a{
     border: solid #64FFDA 1px;
     
 }
-.umichprojects:hover, .umichprojects:focus, .quick-links img:hover, .quick-links img:focus{
+.umichprojects:hover, .umichprojects:focus{
+    transform: scale(0.98);
+    transition: transform 0.3s ease;
+}
+.quick-links img:hover, .quick-links img:focus, .quick-links i:hover, .quick-links i:focus{
     transform: scale(0.98);
     transition: transform 0.3s ease;
 }
@@ -106,7 +175,7 @@ a{
     transition: transform 0.3s ease;
 }
 .nav a {
-    color: white;
+    color: black;
     margin: 0 5px;
     padding: 10px;
     text-decoration: none;
@@ -120,10 +189,11 @@ a{
     border-bottom: solid 4px #020202;
 }
 .quick-links{
+    padding-top: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content:left;
 }
-.quick-links img, .projects img, .icon{
+.quick-links img, .quick-links i, .projects img, .icon{
     width: 10%;
     max-width: 50px;
 }
@@ -221,8 +291,9 @@ ul li::before{
   
 /* add media for preferred reduced motion */
 @media screen and (prefers-reduced-motion: reduce){
-    .skip a{
+    .skip a, .slide-in-from-left, .intro{
         -webkit-transition: none; 
         transition: none;        
     }
+
 }
