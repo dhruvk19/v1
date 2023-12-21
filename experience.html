@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="shortcut icon" type="images/x-icon" href="images/page-favicon.jpeg" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
+    <script src="https://kit.fontawesome.com/cfc9c727ff.js" crossorigin="anonymous"></script>
     <link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
     <title>Dhruv's Portfolio</title>
 </head>
@@ -21,13 +22,13 @@
                     <li><a href="index.html">Home</a></li>
                     <li><a href="projects.html">Projects</a></li>
                     <li><a href="experience.html" class = "curr">Experience</a></li>
-                    <li><a href="DhruvKapur_Resume.pdf" target = "_blank">Resume</a></li>
+                    <li><a href="Dhruv_Kapur_Resume.pdf" target = "_blank">Resume</a></li>
                 </ul>
             </nav>
         </div>
     </div>
     <div class="main">
-        <h1>Experience</h1>
+        <h1 id = "section1">Experience</h1>
         <div class="experiences">
             <div>
                 <h2>Knexus Research Coroperation</h2>
@@ -39,7 +40,8 @@
                     <li>Collaborated with mentor and team to compile findings in a report for <span class="tech-skills">NeurIPS 2023</span> Track Datasets and Benchmarks</li>
 
                 </ul>
-                <img class = "icon" src="images/or-icon.png" alt="Open Review Icon" onclick=redirectToOR()>
+                <!-- <img class = "icon" src="images/or-icon.png" alt="Open Review Icon" onclick=redirectToOR()> -->
+                <img class = "icon" src="images/or-icon-new-2.jpeg" alt="Open Review Icon" onclick=redirectToOR() style = "cursor: pointer;">
             </div>
             <div>
                 <h2>Computer Lab Maintenance</h2>
@@ -55,15 +57,20 @@
 
 
     </div>
-    <footer>
-        <h2>Quick Links:</h2>
+    <footer id = "section2">
+        <h2>Contact me</h2>
+        <p><span class="tech-skills">dhruvka@umich.edu</span></p>
         <div class = "quick-links">
-            <img src="images/linkedin-icon.png" alt="LinkedIn Icon" onclick=redirectToLinkedIn()>
+            <!-- <img src="images/linkedin-icon.png" alt="LinkedIn Icon" onclick=redirectToLinkedIn()>
             <img src="images/github-icon2.png" alt="GitHub Icon" onclick=redirectToGitHub()>
-            <img src="images/or-icon.png" alt="Open Review Icon" onclick=redirectToOR()>
+            <img src="images/or-icon.png" alt="Open Review Icon" onclick=redirectToOR()> -->
+            <i class="fa-brands fa-linkedin fa-2xl" style="color: #66b2b2; cursor: pointer;" onclick="redirectToLinkedIn()"></i>
+            <i class="fa-brands fa-github fa-2xl" style="color: #66b2b2; cursor: pointer;" onclick="redirectToGitHub()"></i>
+            <img src="images/or-icon-new-2.jpeg" alt="Open Review Icon" onclick=redirectToOR() style = "cursor: pointer;">
         </div>
         <script src="js/exp_redirect.js"></script>
         <script src="js/redirect_icon.js"></script>
+        <script src="js/fade_experience.js"></script>
     </footer>
     
 </body>
