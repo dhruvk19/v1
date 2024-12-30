@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="shortcut icon" type="images/x-icon" href="images/page-favicon.jpeg" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2">
+    <script src="https://kit.fontawesome.com/cfc9c727ff.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Archivo Black' rel='stylesheet'>
+    <title>Dhruv's Portfolio</title>
+</head>
+<body>
+    <div class="skip" ><a href="#main" tabindex="1" >Skip to Main Content</a></div>
+    <!-- nav bar -->
+    <div class = "nav">
+        <div class = "flex">
+            <img src="images/page-favicon.jpeg" alt="" class="logo" onclick=redirectHome()>
+            <nav>
+                <ul>
+                    <li><a href="index.html" class = "curr">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="Dhruv_Kapur_Resume.pdf" target = "_blank">Resume</a></li>
+                </ul>
+            </nav>
+        </div>
+
+    </div>
+    <div class="main">
+        <div class = "body_container">
+            <p class="intro">Hi, my name is</p>
+            <h1 class="animate-fl" id="animatedText">Dhruv Kapur.</h1>
+            
+            <div class = "about">
+                <div class = "fade" id = "section1">
+                    <h2>A little bit about me,</h2>
+                </div>
+                <div class = "fade" id = "section1">
+                    <p>In pursuit of a Computer Science degree with a minor in User Experience Design at the University of Michigan - Ann Arbor. I am currenlty a junior eager to continue exploring various fields of software engineering, from front-end developement to AI/ML models.</p>
+                </div>
+                <div class = "fade" id = "section2">
+                    <h2>Education</h2>
+                </div>
+                <div class="school-container fade" id = "section2">
+                    <span class="tech-skills">Bachelor of Science and Engineering in Computer Science</span>
+                    <p>University of Michigan - Ann Arbor<!-- , <span class="tech-skills">April 2026 (expected)</span></p>-->
+                    <div class="coursework">
+                        <p>GPA: 3.73 / 4.00</p>
+                        <p> - Dean's Honor List </p>
+                        <p> - University Honors</p>
+                    </div>
+                    <div>
+                    </div>
+                </div>
+                <div class = "fade" id = "section3">
+                    <h2>Notable Coursework</h2>
+                </div>
+                <div class = "fade" id = "section3">
+                    <li>Applied Parallel Programming with GPUs</li>
+                    <li>Artificial intelligence</li>
+                    <li>Computational Linear Algebra</li>
+                    <li>Computer Organization</li>
+                    <li>Computer Security</li>
+                    <li>Data Structures and Algorithms</li>
+                    <li>Discrete Mathematics</li>
+                    <li>Mobile App Development</li>
+                    <li>Practical Data Science</li>
+                    <li>Web Design, Development, and Accessibility</li>
+                </div>
+            </div>
+            <a href="projects.html" class="umichprojects" tabindex="2" id = "section3">Check out my projects!</a>
+        </div>
+    </div>
+    
+    <footer id = "section4">
+        <h2>Contact me</h2>
+        <p><span class="tech-skills">dhruvka@umich.edu</span></p>
+        <div class = "quick-links">
+            <!-- <img src="images/linkedin-icon.png" alt="LinkedIn Icon" onclick=redirectToLinkedIn()>
+            <i class="fa-brands fa-linkedin fa-2xl" style="color: #66b2b2;"></i> -->
+            <i class="fa-brands fa-linkedin fa-2xl" style="color: #66b2b2; cursor: pointer;" onclick="redirectToLinkedIn()"></i>
+
+            <!-- <img src="images/github-icon2.png" alt="GitHub Icon" onclick=redirectToGitHub()> -->
+            <i class="fa-brands fa-github fa-2xl" style="color: #66b2b2; cursor: pointer;" onclick="redirectToGitHub()"></i>
+            <img src="images/or-icon-new-2.jpeg" alt="Open Review Icon" onclick=redirectToOR() style = "cursor: pointer;">
+        </div>
+        <script src="js/redirect_icon.js"></script>
+        <script src = "js/load.js"></script>
+    </footer>
+</body>
+</html>
+
